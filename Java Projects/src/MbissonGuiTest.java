@@ -6,12 +6,45 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import java.util.Scanner;
 //Version 1 -- learning how to take events from a button
 public class MbissonGuiTest extends Application{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);
+	}
+	
+	public static String toPig(String transWord) {
+		char a = 'a';
+		char e = 'e';
+		char i = 'i';
+		char o = 'o';
+		char u = 'u';
+		
+		String pig;
+		
+		int first = 0;
+		int firstVowel = 0;
+		int last = transWord.length();
+		
+		for(int x = 0; x < last; x++) {
+			char temp = Character.toLowerCase(transWord.charAt(x));
+			if(temp == a || temp == e || temp == i || temp == o || temp == u) {
+	            firstVowel = x;
+	            break;
+	        }
+		}
+		if(first!=firstVowel) {
+			String start = transWord.substring(firstVowel,last);
+			String finish = transWord.substring(first,firstVowel)+"ay";
+			pig = start+finish;
+		}
+		else {
+			pig = transWord+"yay";
+		}
+		
+		return pig;
 	}
 	
 	public void start(Stage primaryStage) throws Exception{
