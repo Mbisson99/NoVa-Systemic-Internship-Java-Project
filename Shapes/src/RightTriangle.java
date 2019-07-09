@@ -13,15 +13,15 @@ public class RightTriangle extends Shape{
 	
 	//uses Pythagoreans Theorem to calculate the third side of the triangle then calculates the perimeter.
 	public double getPerimeter() {
-		sideC = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
-		perimeter = sideA + sideB + sideC;
+		this.sideC = Math.sqrt(Math.pow(this.sideA, 2) + Math.pow(this.sideB, 2));
+		perimeter = this.sideA + this.sideB + this.sideC;
 		return perimeter;
 	}
 
 	//calculates the area using sideA and sideB.
 	public void getArea() {
 		System.out.println("Area of a Right Triangle is height (sideA) * (base (sideB)/2");
-		area = sideA * (sideB/2);
+		area = this.sideA * (this.sideB/2);
 		System.out.println("The area is: " + area);
 	}
 }
