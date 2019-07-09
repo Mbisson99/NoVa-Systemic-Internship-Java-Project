@@ -3,13 +3,11 @@ public class Square extends Rectangle{
 	
 	public Square(String name, int sides, int length, int width) {
 		super(name, sides, length, width); //the super constructor initializes the variables using rectangle
+		
 		//checks if the object is actually a square. If it is not, the name is change to rectangle.
 		if (length != width){
 			this.name = "Rectangle";
-		}
-		this.length = length;
-		this.width = width;
-		
+		}	
 	}
 	
 	//if the object is a rectangle, the Rectangle class's getPerimeter is used instead
