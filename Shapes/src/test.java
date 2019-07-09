@@ -29,7 +29,7 @@ public class test{
 	System.out.printf("%nThe perimeter of the " + rec.name +" is: " + rec.getPerimeter()+"%n");
 	System.out.println("The perimeter of the " + sq.name + " is: " + sq.getPerimeter());
 	System.out.println("The perimeter of the " + faker.name + " is: " + faker.getPerimeter());
-	System.out.println("The perimeter of the " + cir.name + " is: " + cir.getPerimeter());
+	System.out.println("The circumference of the " + cir.name + " is: " + cir.getPerimeter());
 	System.out.printf("The perimeter of the " + riTri.name + " is: "+ riTri.getPerimeter() + "%n%n");
 	
 	//test the area method for the shapes
