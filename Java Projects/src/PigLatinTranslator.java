@@ -8,10 +8,9 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 //Version 1 -- learning how to take events from a button
-public class MbissonGuiTest extends Application{
+public class PigLatinTranslator extends Application{
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		launch(args);
 	}
 	
@@ -31,21 +30,21 @@ public class MbissonGuiTest extends Application{
 			int first = 0;
 			int firstVowel = 0;
 			int last = words[j].length();
-		for(int x = 0; x < last; x++) {
-			char temp = Character.toLowerCase(words[j].charAt(x));
-			if(temp == a || temp == e || temp == i || temp == o || temp == u) {
-	            firstVowel = x;
-	            break;
-	        }
-		}
-		if(first!=firstVowel) {
-			String start = words[j].substring(firstVowel,last);
-			String finish = words[j].substring(first,firstVowel)+"ay";
-			words[j] = start+finish;
-		}
-		else {
-			words[j] = words[j]+"yay";
-		}
+			for(int x = 0; x < last; x++) {
+				char temp = Character.toLowerCase(words[j].charAt(x));
+				if(temp == a || temp == e || temp == i || temp == o || temp == u) {
+					firstVowel = x;
+					break;
+				}
+			}
+			if(first!=firstVowel) {
+				String start = words[j].substring(firstVowel,last);
+				String finish = words[j].substring(first,firstVowel)+"ay";
+				words[j] = start+finish;
+			}
+			else {
+				words[j] = words[j]+"yay";
+			}
 		}
 		for(int y = 0; y < words.length; y++) {
 			if(y!=words.length-1)
@@ -72,7 +71,7 @@ public class MbissonGuiTest extends Application{
 				l.setText(toPig(t.getText()));
 			}
 		};
-		//making sure that when the button is pressed the event acutally happens
+		//linking button to the action
 		b.setOnAction(bPressed);
 		//adding the label and button to the layout
 		layout.getChildren().add(b);
