@@ -88,6 +88,7 @@ public class PigLatinTranslator extends Application{
 		b.setTranslateY(-20);
 		l.setTranslateY(20);
 		t.setTranslateY(-60);
+		//setting the scene so it actually shows up when we run the program
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
