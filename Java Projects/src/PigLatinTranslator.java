@@ -83,7 +83,7 @@ public class PigLatinTranslator extends Application{
 		layout.getChildren().add(l);
 		layout.getChildren().add(t);
 		//creating the window
-		Scene scene = new Scene(layout, 500, 450);
+		Scene scene = new Scene(layout, 1500, 450);
 		//moving the button and layout
 		b.setTranslateY(-20);
 		l.setTranslateY(20);
